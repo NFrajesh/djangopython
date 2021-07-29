@@ -1,0 +1,29 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %}
+    Result
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/solomatchresult.css' %}">
+{% endblock %}
+{% block content %}
+<h3 style="text-align: center;">solo 20-6-2021 match result</h3> <br>
+<table class="table table-light table-bordered table-striped">
+    <thead>
+        <th>Player Name</th>
+        <th>Position</th>
+        <th>Winnings</th>
+    </thead>
+    <tr>
+    {% for smr in solomatchresult %}
+        <td>{{ smr.player1_pubg_name }}</td>
+        <td>{{ smr.position }}</td>
+        <td>{{ smr.prize_amount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+{% endblock %}

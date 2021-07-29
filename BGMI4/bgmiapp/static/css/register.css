@@ -1,0 +1,31 @@
+body {
+    background-image: url(/static/img/pubg.jpg);
+    background-size: cover;
+  }
+
+  label {
+      color:white;
+  }
+
+  h1 {
+      color: orangered;
+      text-align: center;
+  
+      font-weight: bold;
+  }
+  h1.word1 { color:orange;font-weight:bold;font-family:Tahoma;font: size 100px;}
+  span.word2 { color:white;font-weight:bold;font-family:Tahoma;font: size 100px; }
+  span.word3 { color:lightgreen;font-weight:bold;font-family:Tahoma;font: size 100px;}
+
+  h3 {
+      color:snow
+  }
+  #form_register {
+      left      : 75%;
+      top       : 50%;
+      position  : absolute;
+      transform : translate(-50%, -50%);
+  }
+  small{
+      color: white;
+  }

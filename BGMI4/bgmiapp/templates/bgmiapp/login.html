@@ -1,0 +1,26 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block header %}
+<h1 class="word1">BATTLEGROUNDS <span class="word2">MOBILE</span> <span class="word3">INDIA</span></h1>
+{% endblock %}
+
+{% block content %}
+<body>
+<div id="form_login">
+    <h3>Login Here</h3>
+    <br>
+    <form method="POST" autocomplete="off"> 
+        {% csrf_token %}
+       <table>
+        {{form.as_table}}
+       </table>
+       <br>
+       <small class="text_muted">Create an account? <a href="{% url 'register' %}">register</a></small>
+       <div class="container">
+        <button id="btn" type="submit" class="btn btn-primary" style="float:right;">Login</button>
+    </form>
+</div>
+{% endblock %}

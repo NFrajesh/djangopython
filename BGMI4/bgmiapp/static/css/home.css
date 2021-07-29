@@ -1,0 +1,70 @@
+
+h1 {
+text-align: center;
+font-size: 50;
+
+}
+th{
+  text-align: center;
+  color :red ;
+  font-weight: bold;
+  
+}
+td{
+  text-align: center;
+
+}
+u1 {
+list-style: none;
+}
+
+u1 li::before {
+content: "\2022";
+color: red;
+font-weight: bold;
+display: inline-block; 
+width: 1em;
+margin-left: -1em;
+}
+.card-header{
+  color: red;
+  font-weight: bold;
+  
+}
+body{
+  background-color:black;
+}
+h3 {
+  text-decoration: underline;
+  color :white
+}
+h2 {
+  
+  color :white
+}
+table{
+  max-width:60rem;
+  font-family: sans-serif;
+  font: size 0.9em;
+
+}
+#table1{
+  margin-left:auto;
+  margin-right:auto;
+}
+#table2{
+  margin-left:auto;
+  margin-right:auto;
+}
+#table3{
+  margin-left:auto;
+  margin-right:auto;
+}
+#table4{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h1.word1 { color:orange;font-weight:bold;font-family:Tahoma;font: size 100px;}
+span.word2 { color:white;font-weight:bold;font-family:Tahoma;font: size 100px; }
+span.word3 { color:lightgreen;font-weight:bold;font-family:Tahoma;font: size 100px;}

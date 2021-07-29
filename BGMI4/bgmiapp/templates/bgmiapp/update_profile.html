@@ -1,0 +1,21 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %}
+    UpdateProfile
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/update_profile.css' %}">
+{% endblock %}
+{% block content %}
+
+<h3>Edit Profile</h3>
+<br>
+    <form method="POST"> 
+        {% csrf_token %}
+    <table class="table table-light table-bordered table-striped">
+        {{form.as_table}}
+    </table>
+    <br>
+        <div class="container"><button id="btn" type="submit"class="btn btn-warning">UpdateProfile</button></div>
+    </form>
+{% endblock %}

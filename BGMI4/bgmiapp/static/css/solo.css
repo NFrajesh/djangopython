@@ -1,0 +1,19 @@
+
+
+#table5{
+    max-width:40rem;
+    font-family: sans-serif;
+    font: size 0.9em;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container{  
+    text-align: center;  
+    border: 7px;  
+    width: 300px;  
+    height: 200px;  
+    padding-top: 0px;  
+}  
+#btn{  
+    font-size: 20px;  
+    }  

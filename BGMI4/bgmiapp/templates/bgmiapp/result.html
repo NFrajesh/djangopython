@@ -1,0 +1,37 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %}
+    Results
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+{% endblock %}
+{% block content %}
+<h3 style="text-align:center">Finished matches</h3><br>
+<table id="table2" class="table table-bordered table-light">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Prize Amount</th>
+        <th ></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20/6/2021</td>
+        <td>Solo</td>
+        <td>10.30am</td>
+        <td>20.00 RS</td>
+        <td>2000.00 RS</td>
+        <td class="no-border"><a href="/solomatchresult/"><button class="btn btn-warning">Result</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+{% endblock %}

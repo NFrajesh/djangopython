@@ -1,0 +1,35 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %} SOLO {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/solo.css' %}">
+{% endblock %}
+{% block content %}
+<div class="card text-white bg-dark mb-3" style="max-width: 108rem;">
+    <div class="card-header">Solo Match Details</div>
+    <div class="card-body">
+        <u1>
+            <li class="card-text">Player need to come before the room start</li><br>
+            
+            <li class="card-text">If there is any susbisious activity found in match,We can able to block your account </li><br>
+            <li class="card-text">You can also report the suspicious player to our members</li><br>
+            <li class="card-text">Room id and password will be share on your phoneno before 15min of match start </li><br>
+            <li class="card-text">Strictly no teamup</li><br>
+            <li class="card-text">Position 1 will get 900rs</li><br>
+            <li class="card-text">Position 2 will get 700rs</li><br>
+            <li class="card-text">Position 3 will get 400rs</li><br>
+        </u1>
+    </div>
+</div>
+<br>
+<br>
+<form method="POST"> 
+    {% csrf_token %}
+<table class="table table bordered table-light" id="table5">
+    {{formsolo.as_table}}
+    
+</table>
+<br>
+    <div class="container"><button id="btn" type="submit" class="btn btn-primary">Join</button></div>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %} profile {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/update_profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<br>
+
+<h3> user profile</h3>
+    <table class="table table-light table-bordered table-striped">
+        <tbody>
+            <tr>
+                <th>Pubg_Id</th>
+                <td>{{object.pubg_id}}</td>
+            </tr>
+            <tr>
+                <th>Pubg_Name</th>
+                <td>{{object.pubg_name}}</td>
+            </tr>
+            <tr>
+                <th>Phone_No</th>
+                <td>{{object.phone_no}}</td>
+            </tr>
+        </tbody>
+</table>
+<a href="/updateprofile/"><div class="container"><button id="btn" type="submit"class="btn btn-warning">Edit Profile</button></div></a>
+
+
+{% endblock %}

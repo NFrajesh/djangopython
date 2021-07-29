@@ -1,0 +1,19 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block title %}
+    Balance
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/balance.css' %}">
+{% endblock %}
+{% block content %}
+<table class="table table-light table-bordered table-striped">
+    <tbody>
+        <tr>
+            <th>Balance</th>
+            <td>{{object.balance}} Rupees</td>
+        </tr>
+    </tbody>
+</table>
+<a href="/withdraw/"><div class="container"><button id="btn" type="submit" class="btn btn-success">Withdraw</button></div></a>
+{% endblock %}

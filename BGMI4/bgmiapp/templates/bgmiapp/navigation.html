@@ -1,0 +1,44 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    {% if user.is_authenticated %}
+        <span class="navbar-text" style="color: aqua;">
+            Welcome {{user.username}}
+        </span>
+    {% endif %}
+    <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="/home/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="/showprofile/">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="/result/">Results</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="/showbalance/">Withdraw</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="/logout/">Logout</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="/login/">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  style="color: white;"href="/home/">Home</a>
+            </li>
+        {% endif %}
+    </ul>
+  </nav>
+  <br>
+  
+
+  
+  </body>
+  </html>
+  

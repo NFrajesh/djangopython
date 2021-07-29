@@ -1,0 +1,333 @@
+{% extends 'bgmiapp/base.html' %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block title %} Home {% endblock %}
+{% block header %}
+  <h1 class="word1">BATTLEGROUNDS <span class="word2">MOBILE</span> <span class="word3">INDIA</span></h1>
+{% endblock %}
+
+{% block content %}
+<div class="card text-white bg-dark mb-3" style="max-width: 108rem;">
+    <div class="card-header">Eligibility</div>
+    <div class="card-body">
+        <u1>
+            <li class="card-text">Account level must be above 30+</li><br>
+            <li class="card-text">Player need to play Atleast last 2 sesasons</li><br>
+            <li class="card-text">Headshot percentage must be under 30%</li>
+        </u1>
+    </div>
+</div>
+<br>
+<br>
+<h2 style="text-align:center;"> Match details </h2>
+<h3 style="text-align:center">Today</h3>
+<table  class="table table-bordered table-light" id="table1">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Prize Amount</th>
+        <th ></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20/6/2021</td>
+        <td>Solo</td>
+        <td>10.30am</td>
+        <td>Free</td>
+        <td>2000.00 RS</td>
+        <td class="no-border">          
+        {% if user.is_authenticated %}
+          <a href="/solo/"><button class="btn btn-primary">Join</button></a>
+        {% else %}
+          <a href="/login/"><button class="btn btn-primary">Join</button></a>
+        {% endif %}</td>
+      </tr>
+    </tbody>
+</table>
+<br>
+<table class="table table-bordered table-light" id="table1">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Timing</th>
+            <th scope="col">Entry</th>
+            <th scope="col">Prize Amount</th>
+            <th ></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20/6/2021</td>
+            <td>Duo</td>
+            <td>11.30am</td>
+            <td>Free</td>
+            <td>3000.00 RS</td>
+            <td class="no-border">          
+            {% if user.is_authenticated %}
+              <a href="/duo/"><button class="btn btn-primary">Join</button></a>
+            {% else %}
+              <a href="/login/"><button class="btn btn-primary">Join</button></a>
+            {% endif %}</td>
+          </tr>
+    </tbody>
+</table>
+<br>
+<table  class="table table-bordered table-light" id="table1">
+    <thead>
+       <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">Timing</th>
+          <th scope="col">Entry</th>
+          <th scope="col">Prize Amount</th>
+          <th ></th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr>
+        <td>20/6/2021</td>
+        <td>Squad</td>
+        <td>12.30pm</td>
+        <td>Free</td>
+        <td>4000.00 RS</td>
+        <td class="no-border">
+          {% if user.is_authenticated %}
+            <a href="/squad/"><button class="btn btn-primary">Join</button></a>
+          {% else %}
+            <a href="/login/"><button class="btn btn-primary">Join</button></a>
+          {% endif %}
+        </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+  <br>
+  <h3 style="text-align:center">Tomorrow</h3>
+  <table id="table2" class="table table-bordered table-light">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Prize Amount</th>
+        <th ></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>21/6/2021</td>
+        <td>Solo</td>
+        <td>10.30am</td>
+        <td>Free</td>
+        <td>2000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+    <table  class="table table-bordered table-light" id="table1">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">Timing</th>
+          <th scope="col">Entry</th>
+          <th scope="col">Prize Amount</th>
+          <th ></th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>21/6/2021</td>
+        <td>Duo</td>
+        <td>11.30am</td>
+        <td>Free</td>
+        <td>3000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+      <table  class="table table-bordered table-light" id="table1">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Timing</th>
+            <th scope="col">Entry</th>
+            <th scope="col">Prize Amount</th>
+            <th ></th>
+
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <td>21/6/2021</td>
+        <td>Squad</td>
+        <td>12.30pm</td>
+        <td>Free</td>
+        <td>4000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <h3 style="text-align:center">Upcoming</h3>
+  <table class="table table-bordered table-light" id="table3">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Prize Amount</th>
+        <th ></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>22/6/2021</td>
+        <td>Solo</td>
+        <td>10.30am</td>
+        <td>Free</td>
+        <td>2000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      
+      </tr>
+    </tbody>
+  </table>
+  <br>
+    <table  class="table table-bordered table-light" id="table1">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">Timing</th>
+          <th scope="col">Entry</th>
+          <th scope="col">Prize Amount</th>
+          <th ></th>
+        </tr>
+      </thead>
+      <tbody>  
+        <tr>
+        
+        <td>22/6/2021</td>
+        <td>Duo</td>
+        <td>11.30am</td>
+        <td>Free</td>
+        <td>3000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+      <table  class="table table-bordered table-light" id="table1">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Timing</th>
+            <th scope="col">Entry</th>
+            <th scope="col">Prize Amount</th>
+            <th ></th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        
+        <td>22/6/2021</td>
+        <td>Squad</td>
+        <td>12.30pm</td>
+        <td>Free</td>
+        <td>4000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table class="table table-bordered table-light" id="table3">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Prize Amount</th>
+        <th ></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>23/6/2021</td>
+        <td>Solo</td>
+        <td>10.30am</td>
+        <td>Free</td>
+        <td>2000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+    <table  class="table table-bordered table-light" id="table1">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">Timing</th>
+          <th scope="col">Entry</th>
+          <th scope="col">Prize Amount</th>
+          <th ></th>
+        
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>23/6/2021</td>
+        <td>Duo</td>
+        <td>11.30am</td>
+        <td>Free</td>
+        <td>3000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+      <table  class="table table-bordered table-light" id="table1">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Timing</th>
+            <th scope="col">Entry</th>
+            <th scope="col">Prize Amount</th>
+            <th ></th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <td>23/6/2021</td>
+        <td>Squad</td>
+        <td>12.30pm</td>
+        <td>Free</td>
+        <td>4000.00 RS</td>
+        <td class="no-border"><a href="#"><button class="btn btn-primary">Join</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+{% endblock %}
